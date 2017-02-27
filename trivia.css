@@ -1,22 +1,19 @@
 .jumbotron {text-align:center;
 background-color: #7F0000;
-color:#E5BA7C;}
-
-
-
+color:#AD8F5C;}
 
 h2 {font-size:25px;
 margin-top: 50px;
 margin-bottom: 10px;
 text-align: center;
-color:#E5BA7C;}
+color:#AD8F5C;}
 
 
-.answers {font-size:12px;
+.answers {font-size:14px;
 margin-top: 30px;
 margin-bottom: 10px;
 text-align: center;
-color:#E5BA7C;
+color:#AD8F5C;
 margin-right: 5px;
 margin-left: 5px;
 font-weight: normal;}
@@ -29,12 +26,12 @@ margin-right: auto;
 margin-left: auto;
 margin-top: 25px;
 color: #7F0000;
-background-color:#E5BA7C; }
+background-color:#AD8F5C; }
 
 .timer {
 margin-left: 100px;
 position:fixed;
-color:#E5BA7C;
+color:#AD8F5C;
 font-size: 25px;}
 
 body {background-color: #400000;

@@ -31,7 +31,7 @@ function game() {
 
 // display all the questions and answers
 function displayGame() {
-    var htmlContent = "<div class='page'";
+    var htmlContent = "<div class='page' id='wholepage'";
     htmlContent = "<form>"; //opening form
 
     htmlContent += "<div class='timer' id='timerDiv'></div>"
@@ -44,22 +44,22 @@ function displayGame() {
 
 
     htmlContent += "<label class='answers'> Carrot" //opening label
-    htmlContent += "<input type='radio' value=carrot name=toy>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px' value=carrot name=toy>";
     htmlContent += "</label>"
 
 
     htmlContent += "<label class='answers'> Beavie" //opening label
-    htmlContent += "<input type='radio' value=beavie name=toy>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px' value=beavie name=toy>";
     htmlContent += "</label>"
 
 
     htmlContent += "<label class='answers'> Fish Taco" //opening label
-    htmlContent += "<input type='radio' value=fishTaco name=toy>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px' value=fishTaco name=toy>";
     htmlContent += "</label>"
 
 
     htmlContent += "<label class='answers'> Duckie" //opening label
-    htmlContent += "<input type='radio'  value=Duckie name=toy>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px' value=Duckie name=toy>";
     htmlContent += "</label>"
 
 
@@ -74,16 +74,19 @@ function displayGame() {
     htmlContent += "<div style='text-align: center'>"
 
     htmlContent += "<label class='answers'>  Pug/ Chihuahua" //opening label
-    htmlContent += "<input type='radio'  name=breed value=pychi> ";
+    htmlContent += "<input type='radio'  style= 'margin-left:7px' name=breed value=pychi> ";
     htmlContent += "</label>"
+
     htmlContent += "<label class='answers'> Beagle/ Dachshound" //opening label
-    htmlContent += "<input type='radio'  name=breed value=beada>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=breed value=beada>";
     htmlContent += "</label>"
+
     htmlContent += "<label class='answers'> Chihuahua/ Cocker Spaniel" //
-    htmlContent += "<input type='radio' name=breed value=chispy>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=breed value=chispy>";
     htmlContent += "</label>"
+
     htmlContent += "<label class='answers'> Cocker Spaniel/ Pug" //opening 
-    htmlContent += "<input type='radio'  name=breed value=pugSpy>";
+    htmlContent += "<input type='radio'  style= 'margin-left:7px' name=breed value=pugSpy>";
     htmlContent += "</label>"
 
     htmlContent += "</form>"; //closing form
@@ -98,24 +101,66 @@ function displayGame() {
     htmlContent += "<div style='text-align: center'>"
 
     htmlContent += "<label class='answers'>  2 years old" //opening label
-    htmlContent += "<input type='radio'  name=age value=2years> ";
+    htmlContent += "<input type='radio'  style= 'margin-left:7px' name=age value=2years> ";
     htmlContent += "</label>"
     htmlContent += "<label class='answers'> 3 years old" //opening label
-    htmlContent += "<input type='radio'  name=age value=3years>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=age value=3years>";
     htmlContent += "</label>"
     htmlContent += "<label class='answers'> 4 years old" //
-    htmlContent += "<input type='radio' name=age value=4years>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=age value=4years>";
     htmlContent += "</label>"
     htmlContent += "<label class='answers'> 5 years old" //opening 
-    htmlContent += "<input type='radio'  name=age value=5years>";
+    htmlContent += "<input type='radio' style= 'margin-left:7px'  name=age value=5years>";
+    htmlContent += "</label>"
+
+    htmlContent += "</form>"; //closing form
+    htmlContent += "</div>"
+
+    // Question 4
+
+    htmlContent += "<h2> What type of Kibble does Rudy eat? </h2>";
+
+    htmlContent += "<div style='text-align: center'>"
+
+    htmlContent += "<label class='answers'>  BLUE Wilderness" //opening label
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=food value=BLUE> ";
+    htmlContent += "</label>"
+    htmlContent += "<label class='answers'> PURINA ProPlan" //opening label
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=food value=Purina>";
+    htmlContent += "</label>"
+    htmlContent += "<label class='answers'> Simply Nourish Adult Dog Food" //
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=food value=Nourish>";
+    htmlContent += "</label>"
+    htmlContent += "<label class='answers'> Authority: Grain Free" //opening 
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=food value=Authority>";
     htmlContent += "</label>"
 
     htmlContent += "</form>"; //closing form
     htmlContent += "</div>"
 
 
-    htmlContent += "<button id='stopButton' class='btn btn-secondary btn-lg btn-block submitstartbutton'>Submit Answers</button>"
+// Question 5 
 
+
+    htmlContent += "<h2> Which of these things does NOT scare Rudy</h2>";
+
+    htmlContent += "<div style='text-align: center'>"
+
+    htmlContent += "<label class='answers'>  Pumpkins" //opening label
+    htmlContent += "<input type='radio'  style= 'margin-left:7px' name=fear value=pumpkin> ";
+    htmlContent += "</label>"
+    htmlContent += "<label class='answers'> Thunderstorms" //opening label
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=fear value=storm>";
+    htmlContent += "</label>"
+    htmlContent += "<label class='answers'> Vacuum" //
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=fear value=vacuum>";
+    htmlContent += "</label>"
+    htmlContent += "<label class='answers'> Hockey Sticks" //opening 
+    htmlContent += "<input type='radio' style= 'margin-left:7px' name=fear value=hockeysticks>";
+    htmlContent += "</label>"
+
+    htmlContent += "</form>"; //closing form
+    htmlContent += "</div>"
 
     $(".gameDiv").html(htmlContent);
 
@@ -145,11 +190,14 @@ function quiz() {
     var numCorrectAnswers = 0;
     var numIncorrectAnswers = 0;
     var numUncheckedAnswers = 0;
-    var correctAnswers = ["carrot", "chispy", "5years"];
+    var correctAnswers = ["carrot", "chispy", "5years", "BLUE", "storm"];
 
     var firstUserAnswer = $("input[type=radio][name=toy]:checked").val();
     var secondUserAnswer = $("input[type=radio][name=breed]:checked").val();
     var thirdUserAnswer = $("input[type=radio][name=age]:checked").val();
+    var fourthUserAnswer = $("input[type=radio][name=food]:checked").val();
+    var fifthUserAnswer = $("input[type=radio][name=fear]:checked").val();
+
 
     if (firstUserAnswer) {
         if (firstUserAnswer === correctAnswers[0]) {
@@ -181,11 +229,35 @@ function quiz() {
         numUncheckedAnswers++;
     }
 
+    if (fourthUserAnswer) {
+        if (fourthUserAnswer === correctAnswers[3]) {
+            numCorrectAnswers++;
+        } else {
+            numIncorrectAnswers++;
+        }
+    } else {
+        numUncheckedAnswers++;
+    }
 
-    return [numCorrectAnswers, numIncorrectAnswers, numUncheckedAnswers];
+    if (fifthUserAnswer) {
+        if (fifthUserAnswer === correctAnswers[4]) {
+            numCorrectAnswers++;
+        } else {
+            numIncorrectAnswers++;
+        }
+    } else {
+        numUncheckedAnswers++;
+    }
+
+    return ["you answered" + numCorrectAnswers + "about Rudy correctly!", + 
+
+    + "You answered " + numIncorrectAnswers+ "incorrectly!", + 
+    "You did not answer " +numUncheckedAnswers + " questions about Rudy."]; 
 }
+
 
 function displayResults() {
     var results = quiz();
-    alert(results);
+    console.log(results);
+
 }
