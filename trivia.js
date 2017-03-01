@@ -13,8 +13,6 @@ $(document).ready(function() {
 
 });
 
-// Starts game
-
 
 function game() {
     $("#startButton").click(function() {
@@ -34,8 +32,7 @@ function displayGame() {
     var htmlContent = "<div class='page' id='wholepage'";
     htmlContent = "<form>"; //opening form
 
-    htmlContent += "<div class='timer' id='timerDiv'></div>"
-
+    htmlContent += "<div id='timerDiv'></div>"
 
     // Question One
     htmlContent += "<h2>What is Rudy's favorite Toy?</h2>";
@@ -162,6 +159,13 @@ function displayGame() {
     htmlContent += "</form>"; //closing form
     htmlContent += "</div>"
 
+
+    htmlContent += "<button id='stopButton' class='btn btn-secondary btn-lg btn-block submitstartbutton'>Submit Answers</button>"
+   
+    htmlContent += "<div id='resultsCorrect'></div>"
+    htmlContent += "<div id='resultsIncorrect'></div>"
+    htmlContent += "<div id='resultsUnanswered'></div>"
+
     $(".gameDiv").html(htmlContent);
 
 }
@@ -249,15 +253,13 @@ function quiz() {
         numUncheckedAnswers++;
     }
 
-    return ["you answered" + numCorrectAnswers + "about Rudy correctly!", + 
-
-    + "You answered " + numIncorrectAnswers+ "incorrectly!", + 
-    "You did not answer " +numUncheckedAnswers + " questions about Rudy."]; 
+$("#resultsCorrect").html("You answered " + numCorrectAnswers + " question(s) about Rudy correctly!");
+$("#resultsIncorrect").html("You answered " + numIncorrectAnswers + " question(s) incorrectly about Rudy");
+$("#resultsUnanswered").html("You did not answer " + numUncheckedAnswers + " question(s) about Rudy"); 
 }
 
 
 function displayResults() {
     var results = quiz();
-    console.log(results);
 
 }

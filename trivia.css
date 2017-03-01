@@ -28,11 +28,24 @@ margin-top: 25px;
 color: #7F0000;
 background-color:#AD8F5C; }
 
-.timer {
+#timerDiv {
 margin-left: 100px;
 position:fixed;
 color:#AD8F5C;
 font-size: 25px;}
+
+#resultsCorrect{color:#0FA32E;
+text-align: center;
+font-size: 20px;
+margin-top:20px;}
+
+#resultsIncorrect{color:#BF0000;
+text-align: center;
+font-size: 20px;}
+
+#resultsUnanswered{color:#E3B20B;
+text-align: center;
+font-size: 20px;}
 
 body {background-color: #400000;
 margin-bottom: 50px;}}
