@@ -5,7 +5,7 @@
 // timer will stop when users hit the "submit answers" button
 
 // score of correct answers will appear as an alert when user clicks the "submit answers" button OR the timer runs out
-var counter = 10;
+var counter = 30;
 var interval;
 $(document).ready(function() {
 
