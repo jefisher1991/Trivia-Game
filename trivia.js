@@ -21,10 +21,11 @@ function game() {
 
     });
 
-    $("#stopButton").click(function() {
-        displayResults();
-        stopTimer();
-    });
+
+
+    $("body").on("click", "#stopButton", 
+    function() { stopTimer();
+        displayResults(); })
 }
 
 // display all the questions and answers
@@ -136,7 +137,7 @@ function displayGame() {
     htmlContent += "</div>"
 
 
-// Question 5 
+    // Question 5 
 
 
     htmlContent += "<h2> Which of these things does NOT scare Rudy</h2>";
@@ -161,7 +162,7 @@ function displayGame() {
 
 
     htmlContent += "<button id='stopButton' class='btn btn-secondary btn-lg btn-block submitstartbutton'>Submit Answers</button>"
-   
+
     htmlContent += "<div id='resultsCorrect'></div>"
     htmlContent += "<div id='resultsIncorrect'></div>"
     htmlContent += "<div id='resultsUnanswered'></div>"
@@ -253,9 +254,9 @@ function quiz() {
         numUncheckedAnswers++;
     }
 
-$("#resultsCorrect").html("You answered " + numCorrectAnswers + " question(s) about Rudy correctly!");
-$("#resultsIncorrect").html("You answered " + numIncorrectAnswers + " question(s) incorrectly about Rudy");
-$("#resultsUnanswered").html("You did not answer " + numUncheckedAnswers + " question(s) about Rudy"); 
+    $("#resultsCorrect").html("You answered " + numCorrectAnswers + " question(s) about Rudy correctly!");
+    $("#resultsIncorrect").html("You answered " + numIncorrectAnswers + " question(s) incorrectly about Rudy");
+    $("#resultsUnanswered").html("You did not answer " + numUncheckedAnswers + " question(s) about Rudy");
 }
 
 
